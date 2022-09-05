@@ -32,3 +32,8 @@ memoized-property
 termcolor
 
 pytube #extract youtube videos
+
+
+#
+mediapipe
+opencv
