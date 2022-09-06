@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_webrtc import VideoProcessorBase, RTCConfiguration,WebRtcMode, webrtc_streamer
-from utils import *
+from sign-language-translator import utils as ut
 import av
 import cv2
 import numpy as np
@@ -8,6 +8,9 @@ import mediapipe as mp
 import os
 # from tensorflow.keras.models import Sequential
 # from tensorflow.keras.models import load_model
+
+mp_holistic = mp.solutions.holistic # Holistic model
+mp_drawing = mp.solutions.drawing_utils # Drawing utilities
 
 st.title("ASL SYMPTOM DETECTION")
 st.write("Hello, Patient!")
@@ -25,13 +28,13 @@ def callback(frame):
     holistic = mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
      # Make detections
-    image, results = mediapipe_detection(img, holistic)
+    image, results = ut.mediapipe_detection(img, holistic)
 
     # Draw landmarks
-    draw_styled_landmarks(image, results)
+    ut.draw_styled_landmarks(image, results)
 
     # 2. Prediction logic
-    keypoints = extract_keypoints(results)
+    keypoints = ut.extract_keypoints(results)
     sequence.append(keypoints)
     # sequence = sequence[-60:]
 
