@@ -34,7 +34,7 @@ pandas
 
 # app requirements
 mediapipe
-opencv-python-headless==4.3
+opencv-python-headless==4.3.0.38
 streamlit
 streamlit_webrtc
 av
