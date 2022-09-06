@@ -31,4 +31,11 @@ joblib
 memoized-property
 termcolor
 
-pytube #extract youtube videos
+
+#
+mediapipe
+opencv-python-headless
+streamlit
+streamlit_webrtc
+av
+git+git://github.com/pariosur/sign-language-translator.git
