@@ -31,9 +31,10 @@ joblib
 memoized-property
 termcolor
 
-pytube #extract youtube videos
-
 
 #
 mediapipe
-opencv
+opencv-python-headless
+streamlit
+streamlit_webrtc
+av
