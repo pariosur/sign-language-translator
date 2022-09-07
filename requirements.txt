@@ -8,34 +8,33 @@ wheel>=0.29
 # data science
 numpy
 pandas
-scikit-learn
+# scikit-learn
 
 
 
 # tests/linter
-black
-coverage
-flake8
-pytest
-yapf
+# black
+# coverage
+# flake8
+# pytest
+# yapf
 
 # API
-gcsfs
-google-cloud-storage
-mlflow
-s3fs
+# gcsfs
+# google-cloud-storage
+# mlflow
+# s3fs
 
 # utilities
-six>=1.14
-joblib
-memoized-property
-termcolor
+# six>=1.14
+# joblib
+# memoized-property
+# termcolor
 
 
-#
+# app requirements
 mediapipe
-opencv-python-headless
+opencv-python-headless==4.3.0.38
 streamlit
 streamlit_webrtc
 av
-git+git://github.com/pariosur/sign-language-translator.git
